@@ -2,3 +2,5 @@ Quick and dirty C# api to talk with Smappee.
 Documentation for API can be found here: https://smappee.atlassian.net/wiki/display/DEVAPI/SmappeeDevAPI+Home
 
 Make note: no exception handling or code improvements done. Use at own risk :)
+
+More information: http://timdams.com/2015/02/05/a-c-portable-class-library-to-talk-with-smappee-api/
