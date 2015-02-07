@@ -111,7 +111,7 @@ namespace SmappeeAPITD
             return result;
         }
        
-        public async Task<EventsOverview> GetEvents(int servicelocationid, List<int> applianceid, DateTime from, DateTime to, long maxnumber = 50)
+        public async Task<List<Event>> GetEvents(int servicelocationid, List<int> applianceid, DateTime from, DateTime to, long maxnumber = 50)
         {
             HttpClient wc = new HttpClient();
             string url = string.Format(resourceurl + "servicelocation/{0}/events?from={1}&to={2}&maxNumber={3}",
@@ -128,7 +128,7 @@ namespace SmappeeAPITD
             wc.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer" , _token.access_token);
             var res = await wc.GetStringAsync(url);
             Debug.WriteLine(res);
-            var result = JsonConvert.DeserializeObject<EventsOverview>(res);
+            var result = JsonConvert.DeserializeObject<List<Event>>(res);
             return result;
         }
         public async void SetActuatorOn(int servicelocationid, int actuatorid, bool turnon) //Todo: implement duration
