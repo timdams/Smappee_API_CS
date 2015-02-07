@@ -54,7 +54,7 @@ namespace SmappeeAPITD
 
     public class Event
     {
-        public int activePower { get; set; }
+        public float activePower { get; set; }
         public int applianceId { get; set; }
         public long timestamp { get; set; }
 
