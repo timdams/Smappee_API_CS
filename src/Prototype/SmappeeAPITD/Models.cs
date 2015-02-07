@@ -46,12 +46,6 @@ namespace SmappeeAPITD
         public float alwaysOn { get; set; }
     }
 
-
-    public class EventsOverview
-    {
-        public Event[] Property1 { get; set; }
-    }
-
     public class Event
     {
         public float activePower { get; set; }
